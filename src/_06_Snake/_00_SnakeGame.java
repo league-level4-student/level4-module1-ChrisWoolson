@@ -103,12 +103,26 @@ public class _00_SnakeGame implements ActionListener, KeyListener {
 	public void keyPressed(KeyEvent e) {
 		//1. Use a switch statement on e.getKeyCode()
 		//   to determine which key was pressed.
+		System.out.println(e.getKeyCode());
+		switch(e.getKeyCode()) {
+		case (38):{
+			snake.setDirection(Direction.UP);
+		}
+		case (37):{
+			snake.setDirection(Direction.LEFT);
+		}case (40):{
+			snake.setDirection(Direction.DOWN);
+		}case (39):{
+			snake.setDirection(Direction.RIGHT);
+		}
+		
 		
 		// if an arrow key is pressed, set the snake's 
 		// direction accordingly
 		
 		// if the space key is pressed, call the snake's feed method
 		
+		}
 	}
 
 	private void setFoodLocation() {
